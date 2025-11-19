@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: frontend
+  namespace: argocd
+spec:
+  destination:
+    name: in-cluster
+    namespace: default
+  project: default
+  source:
+    path: bruno-lab/frontend
+    repoURL: https://github.com/brnvalenca/lab-k8s-argocd-istio.git
+    targetRevision: HEAD
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true

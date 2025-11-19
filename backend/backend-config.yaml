@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: backend-secret
+type: Opaque
+data:
+  title: cXVhbHF1ZXIgb3V0cmEgY29pc2E=
+  info: cXVhbHF1ZXIgY29pc2E=
