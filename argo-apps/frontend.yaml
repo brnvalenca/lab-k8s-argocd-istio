@@ -9,7 +9,7 @@ spec:
     namespace: default
   project: default
   source:
-    path: /frontend
+    path: frontend
     repoURL: https://github.com/brnvalenca/lab-k8s-argocd-istio.git
     targetRevision: HEAD
   syncPolicy:
